@@ -1,3 +1,5 @@
+@import url("inteligent-form.css");
+
 #app {
   font:14px 'Helvetica Neue',Helvetica,Arial,sans-serif;
   color:#4d4d4d;
@@ -12,4 +14,13 @@ a.active {
 
 nav {
   padding-top:20px;
+}
+
+.rainbowColor {
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+.textInput {
+  display: inline;
+  width: 150px;
 }

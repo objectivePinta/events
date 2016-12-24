@@ -1,11 +1,11 @@
 import React from 'react';
 import {Route,IndexRoute} from 'react-router';
 import App from './components/App';
-import CrazyFrom from './components/CrazyForm';
+import EventForm from './components/EventForm';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={CrazyFrom} />
-    <Route path="about" component={CrazyFrom} />
+    <IndexRoute component={EventForm} />
+    <Route path="about" component={EventForm} />
   </Route>
 );
