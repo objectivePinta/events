@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import {EventFormObject} from '../constants/EventFormObject';
-import IntelligentForm from './common/IntelligentForm';
+import {EventFormObject} from '../../constants/EventFormObject';
+import IntelligentForm from '../common/IntelligentForm';
 
 class EventForm extends Component {
 
@@ -11,17 +11,15 @@ class EventForm extends Component {
 
 
   onSubmit(obj) {
-    console.log("ya baby");
-    console.log(obj);
-    console.log("ya baby");
+    alert(obj);
   }
 
   render() {
-    return <IntelligentForm debug
+    return (<IntelligentForm debug
                             title={EventFormObject.title}
                             onSubmit={this.onSubmit}
                             object = {EventFormObject.object}
-          />;
+          />);
   }
 
 }

@@ -9,9 +9,9 @@ class PrintObject extends Component {
   render() {
     const objectInParagraphs = Object.keys(this.props.givenObject).map(key => {
 
-      return <p key={key}>
+      return (<p key={key}>
         <span style={{color:'red'}}> {key}</span>:<span style={{color:'blue'}}>
-        {this.props.givenObject[key]}</span></p>
+        {this.props.givenObject[key]}</span></p>);
       }
     );
 
@@ -24,5 +24,9 @@ class PrintObject extends Component {
   }
 
 }
+
+PrintObject.propTypes = {
+  givenObject: PropTypes.object
+};
 
 export default PrintObject;

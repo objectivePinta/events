@@ -81,3 +81,7 @@ select{
 .form-style-1 .required{
   color:red;
 }
+
+.btn-submit {
+  margin: 10px 500px 0px 150px;
+}
