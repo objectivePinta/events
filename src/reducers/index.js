@@ -1,10 +1,8 @@
 import {combineReducers} from 'redux';
-import courses from './courseReducer';
-import authors from './authorReducer';
+import events from './eventsReducer';
 
 const rootReducer = combineReducers({
-  courses,//ES6 shorthand property name
-  authors
+  events
 });
 
 export default rootReducer;
