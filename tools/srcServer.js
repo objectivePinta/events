@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
@@ -9,6 +10,7 @@ import proxy from 'express-http-proxy';
 
 const port = 3000;
 const app = express();
+app.use(cors());
 const compiler = webpack(config);
 const apiUri = process.env.API_URI || '/api';
 const apiUrl = process.env.API_URL || 'http://localhost:8080';
@@ -64,6 +66,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));
+app.options(apiUrl, cors());
 app.use(apiUri, proxyMiddleware({ url: apiUrl, authenticate: false }));
 
 app.get('*', function(req, res) {
